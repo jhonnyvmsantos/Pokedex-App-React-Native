@@ -7,7 +7,7 @@ Basicamente, o aplicativo se resume a uma coleção de todos (?) os pokémons do
 
 ## Stack utilizada
 
-**Front-End:** React, React-Native e Expo.
+**Front-End:** React, React-Native (TypeScript) e Expo.
 
 **API:** PokéAPI.
 

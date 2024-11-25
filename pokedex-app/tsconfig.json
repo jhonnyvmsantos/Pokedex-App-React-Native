@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "rootDir": "./src",
+    "outDir": "./dist/js",
+    // "resolveJsonModule": true,
+  },
+  "extends": "expo/tsconfig.base"
+}
