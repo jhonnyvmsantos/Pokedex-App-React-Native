@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from './style';
+import { PokeCard } from '@/components/PokeCard';
 
 interface Poke {
     entry_number: number;
@@ -28,7 +29,7 @@ export default function HomePage() {
             }).then(
                 (res) => res.json()
             ).then((data) => {
-                const temp: Poke[] = data.pokemon_entries;
+                const temp = data.pokemon_entries;
                 setPokedex(temp);
             }).catch(
                 (error) => console.log(error)
@@ -38,6 +39,11 @@ export default function HomePage() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Home Page</Text>
+            <FlatList
+                data={pokedex}
+                renderItem={({ item }) => <PokeCard title={item.pokemon_species.name} />}
+                keyExtractor={(item: Poke) => item.entry_number.toString()}
+            />
         </View>
     );
 }
