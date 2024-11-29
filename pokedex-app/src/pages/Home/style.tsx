@@ -8,7 +8,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     text: {
-        textAlign: "center"
+        textAlign: "center",
+        margin: 30,
     }
 });
 

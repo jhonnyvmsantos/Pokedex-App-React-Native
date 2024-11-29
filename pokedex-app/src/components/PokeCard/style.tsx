@@ -9,6 +9,10 @@ const styles = StyleSheet.create({
     },
     text: {
         textAlign: "center"
+    },
+    img: {
+        width: 100,
+        height: 100,
     }
 });
 

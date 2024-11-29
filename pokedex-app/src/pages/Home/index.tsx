@@ -16,7 +16,7 @@ export default function HomePage() {
     const navigation = useNavigation();
     const [pokedex, setPokedex] = React.useState([]);
 
-    React.useEffect(() => {
+    React.useEffect((): void => {
         fetch(
             'https://pokeapi.co/api/v2/pokedex/1',
             {
@@ -41,7 +41,11 @@ export default function HomePage() {
             <Text style={styles.text}>Home Page</Text>
             <FlatList
                 data={pokedex}
-                renderItem={({ item }) => <PokeCard title={item.pokemon_species.name} />}
+                renderItem={({ item }) => {
+                    return (
+                        <PokeCard id={item.entry_number} title={item.pokemon_species.name} />
+                    )
+                }}
                 keyExtractor={(item: Poke) => item.entry_number.toString()}
             />
         </View>
