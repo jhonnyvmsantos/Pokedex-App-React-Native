@@ -1,5 +1,5 @@
 
-# Quiz Game
+# Pokedex
 
 Repositório para armazenar o programa Pokédex (Pokedex).
 
